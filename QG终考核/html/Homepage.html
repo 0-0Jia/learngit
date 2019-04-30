@@ -12,11 +12,12 @@
         <div class="logo">
             <img src="../image/logo.png" width="183px" height="114px">
         </div>
+        &nbsp;
         <!--导航-->
         <nav>
             <ul>
-                <li><a href="">登录</a></li>
-                <li><a href="">注册</a></li>
+                <li><a href="javascript:;" onclick="Show();">登录</a></li>
+                <li><a href="javascript:;" onclick="ShowTwo();">注册</a></li>
                 <li><a href="">帮助</a></li>
                 <li><a href="">中英切换</a></li>
             </ul>
@@ -24,8 +25,8 @@
     </header>
     <!--轮播图-->
     <div class="banner">
-    <div class="Rotation-chart" style="left:-830px;">
-        <div class="wrap">
+    <div class="Rotation-chart" >
+        <div class="wrap" style="left:-830px;">
             <img src="../image/5.jpg">
             <img src="../image/1.jpg">
             <img src="../image/2.jpg">
@@ -35,11 +36,11 @@
             <img src="../image/1.jpg">
         </div>
         <div class="buttons">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <span name="dots"></span>
+            <span name="dots"></span>
+            <span name="dots"></span>
+            <span name="dots"></span>
+            <span name="dots"></span>
         </div>
         <a href="javascript:;" class="arrow arrow_left">&lt;</a>
         <a href="javascript:;" class="arrow arrow_right">&gt;</a>
@@ -50,8 +51,7 @@
                 让你的每一天<br>
                 拥有不一样的惊喜<br>
             </p>
-            <input class="search" type="text" name="search" placeholder=" 每天一购，开启好心情" style="width:380px; height:40px;">
-            <input class="submit" type="button" name="submit" value=" " style="width:40px; height:40px;">
+            <input class="search" type="text" name="search" placeholder=" 每天一购，开启好心情" style="width:380px; height:40px;"><input class="submit" type="button" name="submit" value=" &nbsp;" style="width:40px; height:40px;">
         </div>
     </div>
     <!--展示区域-->
@@ -63,12 +63,75 @@
                 <li><a href="">限时特价</a></li>
             </ul>
         </nav>
-        <p>
-            ------------------------<br>
-            ------------------------<br>
-            ------------------------<br>
-        </p>
+        <div class="row-one">
+            <ul>
+                <a href="">
+                    <div class="product">
+                        <img src="../image/love.png"><br>
+                        <p>￥</p>
+                        <p>新款.......<br>
+                            ...........<br>
+                        </p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="product">
+                        <img src="../image/love.png"><br>
+                        <p>￥</p>
+                        <p>新款.......<br>
+                            ...........<br>
+                        </p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="product">
+                        <img src="../image/love.png"><br>
+                        <p>￥</p>
+                        <p>新款.......<br>
+                            ...........<br>
+                        </p>
+                    </div>
+                </a>
+            </ul>
+        </div>
+        <div class="row-two">
+            <ul>
+                <a href="">
+                    <div class="product">
+                        <img src="../image/love.png"><br>
+                        <p>￥</p>
+                        <p>新款.......<br>
+                            ...........<br>
+                        </p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="product">
+                        <img src="../image/love.png"><br>
+                        <p>￥</p>
+                        <p>新款.......<br>
+                            ...........<br>
+                        </p>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="product">
+                        <img src="../image/love.png"><br>
+                        <p>￥</p>
+                        <p>新款.......<br>
+                            ...........<br>
+                        </p>
+                    </div>
+                </a>
+            </ul>
+        </div>
+        <div class="select">
+            <input type="button" class="" value="首页" onclick="">
+            <input type="button" class="" value="上一页" onclick="">
+            <input type="button" class="" value="下一页" onclick="">
+        </div>
     </div> 
+    <div class="centerline"></div>
     <div class="container-two">
         <p>
             ------------------------<br>
@@ -93,6 +156,40 @@
             </li>
         </ul>
     </div>
+    <!--登录-->
+    <div id="shade" class="c1 hide"></div>
+    <div id="modal" class="c2 hide">
+        <div class="login">
+            <span>登 录 QG SHOP</span>
+        </div>
+    <p><input type="text"  id="" class="text" name="" tabindex="" value="" maxlength="" placeholder="userName"/></p>
+    <p><input type="password" id="" class="password" tabindex="" value="" maxlength="" placeholder="password"/></p>
+    <input type="button" class="sign-in" value="登  录">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" class="close" value="取  消" onclick="Hide();">
+    <div class="next">
+        <span class="left">
+            <a class="" href="" target="_blank" title="" tabindex="">注册新账号</a>
+        </span>      
+        <span class="right">
+            <a class="" href="" target="_blank" title="" tabindex="">忘记密码?</a>
+        </span>
+    </div>
+    </div>
+    <!--注册-->
+    <div id="a" class="c1 hide"></div>
+    <div id="b" class="c2 hide">
+        <div class="login">
+            <span>注 册 QG SHOP</span>
+        </div>
+    <p><input type="text"  id="" class="text" name="" tabindex="" value="" maxlength="" placeholder="new username"/></p>
+    <p><input type="password" id="" class="password" tabindex="" value="" maxlength="" placeholder="new password"/></p>
+    <p><input type="password" id="" class="password" tabindex="" value="" maxlength="" placeholder="enter your password again"/></p>
+    <input type="button" class="sign-in" value="确 定">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="button" class="close" value="返 回 登 录" onclick="HideTwo();">
+    </div>
+
 
     <!--页尾-->
     <footer>
@@ -107,17 +204,18 @@
                 轻松活泼的家庭式氛围。
                 每位在QG SHOP进行交易的人，
                 不但交易更迅速，而且也能交到更多朋友。
+                <a href="../image/QR.png" target="_blank">[了解更多]</a>
             </p>
         </div>
         <div class="content-M">
             <h2>商品展示</h2>
             <ul>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
-                <li>1</li>
+                <li><a href="">1</a></li>
+                <li><a href="">1</a></li>
+                <li><a href="">1</a></li>
+                <li><a href="">1</a></li>
+                <li><a href="">1</a></li>
+                <li><a href="">1</a></li>
             </ul>
         </div>
         <div class="content-R">
@@ -136,7 +234,11 @@
         </div>
         <div class="end-line"></div>
         <div class="end">
-            <p>****************************</p>
+            <p>
+                <br>
+                © 2000-现在 QGstudio.com 版权所有
+            </p>
+            <br>
         </div>
     </footer>
 <script type="text/javascript" src="../js/picture.js"></script>

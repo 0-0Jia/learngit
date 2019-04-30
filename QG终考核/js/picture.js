@@ -52,7 +52,7 @@ container.onmouseleave = function () {
 }
 
 var index = 0;
-var dots = document.getElementsByTagName("span");
+var dots = document.getElementsByName("dots");
 function showCurrentDot () {
     for(var i = 0, len = dots.length; i < len; i++){
         dots[i].className = "";
@@ -76,4 +76,21 @@ for (var i = 0, len = dots.length; i < len; i++){
             showCurrentDot();
         }
     })(i);            
+}
+
+function Show(){
+    document.getElementById('shade').classList.remove('hide');
+    document.getElementById('modal').classList.remove('hide');
+}
+ function Hide(){
+    document.getElementById('shade').classList.add('hide');
+    document.getElementById('modal').classList.add('hide');
+}
+function ShowTwo(){
+    document.getElementById('a').classList.remove('hide');
+    document.getElementById('b').classList.remove('hide');
+}
+ function HideTwo(){
+    document.getElementById('a').classList.add('hide');
+    document.getElementById('b').classList.add('hide');
 }

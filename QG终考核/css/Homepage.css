@@ -4,6 +4,7 @@
 }
 body {
     font-family: 微软雅黑,'Courier New', Courier, monospace;
+    font-size: 16px;
 }
 ul {
     list-style-type: none;
@@ -17,7 +18,7 @@ header {
     top: 0;
     width: 100%;
     height: 118px;
-    background: linear-gradient( rgb(97, 97, 97), rgba(128, 128, 128, 0.466));
+    background: linear-gradient( rgb(97, 97, 97), rgba(128, 128, 128, 0.05));
 }
 .logo {
     float: left;
@@ -63,10 +64,11 @@ header nav ul li a:active {
 .banner {
     position: relative;
     margin: 0 auto;
+    width: 100%;
 }
 .Rotation-chart {
     position: relative;
-    width: 123%;
+    width: 830px;
     height: 380px;
     z-index: 5;
     margin: 0 auto;
@@ -76,7 +78,7 @@ header nav ul li a:active {
     position: absolute;
     width: 5810px;
     height: 380px;
-    overflow: hidden;
+
 
 }
 .Rotation-chart .wrap img {
@@ -108,7 +110,7 @@ header nav ul li a:active {
 }
 .Rotation-chart .arrow {
     position: absolute;
-    top: 50%;
+    top: 40%;
     color: white;
     padding:0px 14px;
     border-radius: 50%;
@@ -132,24 +134,26 @@ header nav ul li a:active {
 .introduction {
     position: absolute;
     top: 35%;
-    left: 25%;
+    left: 20.5%;
     z-index: 20;
 }
 .introduction input {
     color: black;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 10%;
+    background-color: rgba(255, 255, 255, 0.7);
 }
 .submit {
+    margin-left: -40px;
     background-image: url("../image/search.png");
     background-size: contain;
     background-repeat: no-repeat;
+    text-align: center;
 }
 .introduction p {
     font-size: 150%;
 }
 .QGshop {
     font-size: 200%;
+    font-weight: 550;
     background-color: rgba(255, 255, 255, 0.568);
 }
 /*container-one*/
@@ -157,12 +161,12 @@ header nav ul li a:active {
     position: relative;
     width: 100%;
     height: 40%;
+    display: block;
     z-index: 10;
     text-align: center;
 }
 .container-one ul {
-    width: 50%;
-
+    width: 80%;
     margin: 1% auto;
 }
 .container-one ul li {
@@ -172,10 +176,7 @@ header nav ul li a:active {
     margin: 3% 4%;
     padding: 1%;
     border: 1px solid white;
-    background: linear-gradient(rgba(128, 128, 128, 0.466), rgb(49, 49, 49));
-}
-.container-one ul li a {
-    padding: 10% 0;
+    background: linear-gradient(rgba(128, 128, 128, 0.3), rgb(49, 49, 49));
 }
 .container-one ul li a:hover {
     color: black;
@@ -186,6 +187,40 @@ header nav ul li a:active {
 .container-one ul li a:link {
     color: black;
 }
+.container-one .row-one {
+    vertical-align: top;
+    position: relative;
+    width: 800px;
+    height: 400px;
+    
+}
+.container-one .row-two {
+    vertical-align: top;
+    width: 800px;
+    height: 400px;
+}
+.container-one .row-one ul a {
+    float: left;
+}
+.container-one .row-two ul a {
+    float: left;
+}
+.container-one .product {
+    display: inline;
+}
+.container-one .select {
+    margin: 5% 0;
+
+}
+
+.centerline {
+    background-color: black;
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+}
+
+/*container-two*/
 .container-two {
     position: relative;
     width: 100%;
@@ -199,6 +234,7 @@ header nav ul li a:active {
     position: fixed;
     right: 1.5%;
     top: 20%;
+    z-index: 20;
 }
 .sidebar img {
     width: 35px;
@@ -218,7 +254,7 @@ header nav ul li a:active {
 footer {
     width: 100%;
     height: 20%;
-    background: linear-gradient(rgba(128, 128, 128, 0.466), rgb(49, 49, 49));
+    background: linear-gradient(rgba(128, 128, 128, 0.1), rgb(49, 49, 49));
     clear: both;
     text-align: center;
     z-index: 10;
@@ -226,7 +262,7 @@ footer {
 .footer-top {
     display: table;
     width: 90%;
-    margin: 10px, 0;
+    line-height: 170%;
 }
 .content-L {
     display: table-cell;
@@ -266,4 +302,113 @@ footer {
 }
 .end {
     color: rgba(255, 255, 255, 0.6);
+
+}
+.end p {
+    font-size: 90%;
+}
+
+.hide{
+    display: none;
+}
+.c1{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 30;
+}
+.c2{
+    background-color: white;
+    position: fixed;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    z-index: 30;
+    margin-top: -150px;
+    margin-left: -200px;
+    border-radius: 5%;
+    text-align: center;
+} 
+.c2 .login {
+    margin-top: 5%;
+}
+.c2 .login span {
+    font-size: 150%;
+}
+.c2 p input {
+    margin: 0;
+    margin-top: 3%;
+    padding: 3%;
+    padding-left: 12%;
+    font-size: 90%;
+    border-radius: 5%;
+}
+
+
+@font-face {
+    font-family: Font-one; 
+    src:url("../font-family/SF-Pro.ttf"); 
+}
+.c2 .text {
+    margin-top: 7%;
+    background-image: url("../image/user-name.png");
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.c2 .password {
+    background-image: url("../image/password.png");
+    background-position: left;
+    background-repeat: no-repeat;
+}
+.c2 .sign-in{
+    margin: 0;
+    margin-top: 3%;
+    cursor:pointer;
+    padding: 2%;
+    font-size: 100%;
+    border-radius: 5%;
+    background: linear-gradient(transparent, rgb(136, 136, 136), rgb(32, 32, 32));
+}
+.c2 .close{
+    margin: 0;
+    margin-top: 3%;
+    cursor:pointer;
+    padding: 2%;
+    font-size: 100%;
+    border-radius: 5%;
+    background: linear-gradient(transparent, rgb(136, 136, 136), rgb(32, 32, 32));
+}
+.next {
+    margin: 0 auto;
+    margin-top: 4%;
+}
+.next .left {
+    text-align: left;
+}
+.next .right {
+    text-align: right;
+}
+.next .left a {
+    padding: 0 6%;
+    font-size: 100%;
+    color: black;
+    text-align: center;
+}
+.next .right a {
+    padding: 0 6%;
+    color: black;
+}
+.next a:link {
+    color: black;
+}
+.next a:hover {
+    color: gray;
+}
+.next a:active {
+    color: gray;
+    border-bottom: 1px solid gray;
 }
