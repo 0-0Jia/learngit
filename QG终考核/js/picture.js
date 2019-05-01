@@ -1,3 +1,4 @@
+/*轮播图*/ 
 var wrap = document.querySelector(".wrap");
 var next = document.querySelector(".arrow_right");
 var prev = document.querySelector(".arrow_left");
@@ -77,7 +78,7 @@ for (var i = 0, len = dots.length; i < len; i++){
         }
     })(i);            
 }
-
+/*登录注册*/
 function Show(){
     document.getElementById('shade').classList.remove('hide');
     document.getElementById('modal').classList.remove('hide');
@@ -93,4 +94,19 @@ function ShowTwo(){
  function HideTwo(){
     document.getElementById('a').classList.add('hide');
     document.getElementById('b').classList.add('hide');
+}
+/*纵向菜单*/
+window.onload = hoversee;
+function hoversee(){
+    var list = document.getElementById('service');
+    var zu = list.getElementsByTagName("li");
+    for(var i=0;i<10;i++)
+    {
+        zu[i].onmouseover = function(){
+            this.getElementsByTagName('dl')[0].style.display = "block";
+        }
+        zu[i].onmouseout = function(){
+            this.getElementsByTagName('dl')[0].style.display = "none";
+        }
+    }
 }

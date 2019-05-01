@@ -12,13 +12,24 @@ ul {
 a{
     text-decoration: none;
 }
+h2 {
+    margin: 5px auto;
+}
+input {
+    outline:none;
+}
 
+.all {
+    min-width: 1280px;
+}
 /*header*/
 header {
+    position: fixed;
     top: 0;
     width: 100%;
     height: 118px;
     background: linear-gradient( rgb(97, 97, 97), rgba(128, 128, 128, 0.05));
+    z-index: 100;
 }
 .logo {
     float: left;
@@ -60,18 +71,97 @@ header nav ul li:hover {
 header nav ul li a:active {
     color: black;
 }
+.header-container {
+    top: 0;
+    width: 100%;
+    height: 118px;
+}
 /*banner*/
 .banner {
     position: relative;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
 }
+/*分类栏*/
+.classify {
+    float: left;
+    width: 12%;
+    text-align: center;
+}
+.classify h2 {
+    background-color: black;
+    color: white;
+    padding: 6px;
+    z-index: 32;
+}
+.classify ul {
+    border: 1px solid rgba(128, 128, 128, 0.6);
+    padding: 6px;
+    z-index: 35;
+}
+.classify ul li {
+    height: 30px;
+    z-index: 30;
+}
+.service-two {
+    display: none;
+    position: absolute;
+    top: 54px;
+    left: 144px;
+    width: 600px;
+    height: 310px;
+    border: 1px solid black;
+    z-index: 100;
+}
+#service li dl{
+    position: relative;
+    left: 138px;
+    top: -28px;
+    width: 600px;
+    height: 294px;
+    background: rgba(255, 255, 255, 0.8);
+    display: none;
+    padding: 8px 10px;
+    border: 1px solid black;
+    z-index: 30;
+}
+.recommend a img {
+    width: 120px;
+    height: 90px;
+    margin-top: 5px;
+}
+.recommend a img:hover {
+    border: 1px solid black;
+}
+#service li dt{
+    position: relative;
+    width: 150px;
+    line-height: 30px;
+    height: 30px;
+    background: rgb(5, 5, 5);
+    color: #fff;
+    text-align: center;
+}
+#service li dd a{
+    position: relative;
+    display: inline-block;
+    height: 20px;
+    width: 70px;
+    font-size: 14px;
+    color: #424242;
+    text-align: left;
+}
+#service li dd a:hover{
+    text-decoration: underline;
+}
+
+/*轮播*/
 .Rotation-chart {
     position: relative;
     width: 830px;
     height: 380px;
     z-index: 5;
-    margin: 0 auto;
+    margin: 0 0 0 13%;
     overflow: hidden;
 }
 .wrap {
@@ -88,8 +178,8 @@ header nav ul li a:active {
 }
 .Rotation-chart .buttons {
     position: absolute;
-    right: 330px;
-    bottom:20px;
+    right: 290px;
+    bottom: 12px;
     width: 180px;
     height: 25px;
     z-index: 2;
@@ -97,8 +187,8 @@ header nav ul li a:active {
 .Rotation-chart .buttons span {
     margin-left: 7px;
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     background-color: black;
     text-align: center;
@@ -111,10 +201,10 @@ header nav ul li a:active {
 .Rotation-chart .arrow {
     position: absolute;
     top: 40%;
-    color: white;
-    padding:0px 14px;
+    color: black;
+    padding: 0px 11px;
     border-radius: 50%;
-    font-size: 50px;
+    font-size: 40px;
     z-index: 2;
     display: none;
     text-decoration: none;
@@ -134,26 +224,49 @@ header nav ul li a:active {
 .introduction {
     position: absolute;
     top: 35%;
-    left: 20.5%;
+    left: 25%;
     z-index: 20;
 }
 .introduction input {
     color: black;
+    border: none;
+    z-index: 2;
+}
+.introduction .search{
+    position: relative;
+    margin: 1.5% 9% 0 3%;
+    background-color: transparent;
+}
+.searchframe {
+    width: 380px;
+    height: 40px;
+    margin: 8px 0;
     background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 3.28px 3.774px 9.9px 1.1px rgba(0, 0, 0, 0.11);
 }
 .submit {
-    margin-left: -40px;
-    background-image: url("../image/search.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
+    cursor: pointer;
+    float: right;
+    margin: 0.5% 0 0 1%;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+.submit img {
+    float: left;
+    width: 30px;
+    height: 30px;
 }
 .introduction p {
     font-size: 150%;
+    color: white;
 }
 .QGshop {
     font-size: 200%;
     font-weight: 550;
+    color: black;
     background-color: rgba(255, 255, 255, 0.568);
 }
 /*container-one*/
@@ -161,43 +274,61 @@ header nav ul li a:active {
     position: relative;
     width: 100%;
     height: 40%;
+    margin: 5% 0;
     display: block;
     z-index: 10;
     text-align: center;
 }
+/*导购导航*/
 .container-one ul {
-    width: 80%;
-    margin: 1% auto;
+    margin: 1% 0;
 }
 .container-one ul li {
     display: inline;
     font-size: 120%;
-    color: white;
     margin: 3% 4%;
     padding: 1%;
-    border: 1px solid white;
-    background: linear-gradient(rgba(128, 128, 128, 0.3), rgb(49, 49, 49));
-}
-.container-one ul li a:hover {
-    color: black;
-}
-.container-one ul li a:visited {
-    color: black;
+    background-color: black;
+    border-radius: 5%;
 }
 .container-one ul li a:link {
+    color: white;
+}
+.container-one ul li a:visited {
+    color: white;
+}
+.container-one ul li a:hover {
+    font-weight: 550;
     color: black;
+
+}
+.container-one nav ul li:hover {
+    border: 2px solid black;
+    background-color: white;
+}
+
+
+.container-one .allproduct {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
 }
 .container-one .row-one {
     vertical-align: top;
     position: relative;
+    margin: 0 auto;
     width: 800px;
-    height: 400px;
-    
+    height: 250px;
 }
 .container-one .row-two {
     vertical-align: top;
+    position: relative;
+    margin: 0 auto;
     width: 800px;
-    height: 400px;
+    height: 250px;
+}
+.container-one p {
+    text-align: left;
 }
 .container-one .row-one ul a {
     float: left;
@@ -210,14 +341,13 @@ header nav ul li a:active {
 }
 .container-one .select {
     margin: 5% 0;
-
 }
-
+/*中间线*/
 .centerline {
     background-color: black;
     width: 80%;
     height: 2px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 /*container-two*/
@@ -307,7 +437,29 @@ footer {
 .end p {
     font-size: 90%;
 }
+footer a:link {
+    color: black;
+}
+footer a:visited {
+    color: black;
+}
+footer a:hover {
+    color: white;
+}
+footer .content-L a:link {
+    color: rgb(63, 63, 63);
+}
+footer .content-L a:visited {
+    color: purple;
+}
+footer .content-L a:hover {
+    color: white;
+}
 
+
+
+
+/*登录注册*/
 .hide{
     display: none;
 }
@@ -321,67 +473,101 @@ footer {
     z-index: 30;
 }
 .c2{
-    background-color: white;
     position: fixed;
     width: 400px;
-    height: 300px;
+    height: 305px;
     top: 50%;
     left: 50%;
     z-index: 30;
     margin-top: -150px;
     margin-left: -200px;
-    border-radius: 5%;
     text-align: center;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
 } 
-.c2 .login {
-    margin-top: 5%;
+.c3{
+    position: fixed;
+    width: 400px;
+    height: 310px;
+    top: 50%;
+    left: 50%;
+    z-index: 30;
+    margin-top: -150px;
+    margin-left: -200px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+} 
+.title {
+    margin-top: 2%;
 }
-.c2 .login span {
-    font-size: 150%;
+.title img {
+    height: 91px;
+    width: 146px;
+}
+.title span {
+    font-size: 190%;
 }
 .c2 p input {
     margin: 0;
-    margin-top: 3%;
+    margin-top: 2%;
     padding: 3%;
     padding-left: 12%;
-    font-size: 90%;
-    border-radius: 5%;
+    font-size: 82%;
+    border-radius: 18px;
 }
-
-
+.c3 p input {
+    margin: 0;
+    margin-top: 2%;
+    padding: 3%;
+    padding-left: 12%;
+    font-size: 82%;
+    border-radius: 18px;
+}
+/*字体*/
 @font-face {
     font-family: Font-one; 
     src:url("../font-family/SF-Pro.ttf"); 
 }
-.c2 .text {
-    margin-top: 7%;
+.text {
+    margin-top: 1%;
     background-image: url("../image/user-name.png");
+    background-color: rgba(253, 252, 252, 0.8);
     background-position: left;
     background-repeat: no-repeat;
+    border: 1px solid black;
 }
-.c2 .password {
+.password {
+    margin-bottom: 1%;
     background-image: url("../image/password.png");
+    background-color: rgba(253, 252, 252, 0.8);
     background-position: left;
     background-repeat: no-repeat;
+    border: 1px solid black;
 }
-.c2 .sign-in{
+.sign-in{
     margin: 0;
     margin-top: 3%;
     cursor:pointer;
     padding: 2%;
     font-size: 100%;
+    font-weight: 600;
     border-radius: 5%;
-    background: linear-gradient(transparent, rgb(136, 136, 136), rgb(32, 32, 32));
+    background: linear-gradient(rgba(219, 219, 219, 0.6), rgba(250, 248, 248, 0.8), rgb(136, 136, 136,0.6));
+    border: 1px solid black;
 }
-.c2 .close{
+.close {
     margin: 0;
     margin-top: 3%;
     cursor:pointer;
     padding: 2%;
     font-size: 100%;
+    font-weight: 600;
     border-radius: 5%;
-    background: linear-gradient(transparent, rgb(136, 136, 136), rgb(32, 32, 32));
+    background: linear-gradient(rgba(136, 136, 136,0.6), rgb(250, 248, 248, 0.8), rgb(136, 136, 136,0.6));
+    border: 1px solid black;
 }
+
 .next {
     margin: 0 auto;
     margin-top: 4%;
@@ -393,22 +579,98 @@ footer {
     text-align: right;
 }
 .next .left a {
-    padding: 0 6%;
+    padding: 0 10%;
     font-size: 100%;
     color: black;
     text-align: center;
 }
 .next .right a {
-    padding: 0 6%;
+    padding: 0 10%;
     color: black;
 }
 .next a:link {
-    color: black;
+    font-weight: 400;
+}
+.next a:visited {
+    font-weight: 600;
 }
 .next a:hover {
-    color: gray;
+    font-weight: 600;
 }
 .next a:active {
-    color: gray;
+    font-weight: 800;
     border-bottom: 1px solid gray;
+}
+
+/*动态类牛顿摆装饰*/
+.loader {
+    margin: 10px, 0;
+    padding: 5%, 0;
+}
+.loader span {
+    position: relative;
+    margin: 0 10px; 
+    width: 500px;
+    height: 50px;
+    background-color: black;
+}
+.loader span::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    background-color: black;
+}
+.loader span:first-child {
+    animation: moving-left 3s infinite;
+    animation-direction: alternate;
+}
+.loader span:last-child {
+    animation: moving-right 3s infinite;
+    animation-direction: alternate;
+}
+@keyframes moving-left {
+    0%{
+        left: 99px;
+    }
+    50%{
+        left: 200px;
+    }
+    100%{
+        left: 99px;
+    }
+}
+@keyframes moving-right {
+    0%{
+        right: 99px;
+    }
+    50%{
+        right: 200px;
+    }
+    100%{
+        right: 99px;
+    }
+}
+
+/*响应式布局*/
+/* ----------- */
+@media only screen
+and (min-width : 1340px)
+and (max-width : 958px) {
+/* Styles如上 */
+}
+/* ----------- */
+@media only screen
+and (min-width : 1450px) {
+    .all {
+        width: 1450px;  /*凝胶布局*/
+        margin-left: auto;
+	    margin-right: auto;
+    }
+}
+/* ----------- */
+@media only screen
+and (max-width : 958px) {
+
 }
