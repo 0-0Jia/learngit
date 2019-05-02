@@ -100,7 +100,7 @@ window.onload = hoversee;
 function hoversee(){
     var list = document.getElementById('service');
     var zu = list.getElementsByTagName("li");
-    for(var i=0;i<10;i++)
+    for(var i=0; i<10; i++)
     {
         zu[i].onmouseover = function(){
             this.getElementsByTagName('dl')[0].style.display = "block";
@@ -110,3 +110,4 @@ function hoversee(){
         }
     }
 }
+

@@ -3,7 +3,7 @@
     padding: 0;
 }
 body {
-    font-family: 微软雅黑,'Courier New', Courier, monospace;
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
     font-size: 16px;
 }
 ul {
@@ -11,6 +11,12 @@ ul {
 }
 a{
     text-decoration: none;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
 }
 h2 {
     margin: 5px auto;
@@ -22,20 +28,22 @@ input {
 .all {
     min-width: 1280px;
 }
-/*header*/
+/*页眉*/
 header {
     position: fixed;
     top: 0;
-    width: 100%;
+    width: 1355px;
     height: 118px;
     background: linear-gradient( rgb(97, 97, 97), rgba(128, 128, 128, 0.05));
     z-index: 100;
 }
+/*左侧logo*/
 .logo {
     float: left;
     height: 100px;
     width: 40%;
 }
+/*右侧导航*/
 header nav {
     float: right;
     width: 30%;
@@ -62,7 +70,7 @@ header nav ul li a:link {
     color: rgba(255, 255, 255, 0.7);
 }
 header nav ul li a:visited {
-    color: black;
+    color: white;
 }
 header nav ul li:hover {
     color: black;
@@ -85,9 +93,11 @@ header nav ul li a:active {
 /*分类栏*/
 .classify {
     float: left;
-    width: 12%;
+    width: 12.5%;
+    margin: 0 0 0 3%;
     text-align: center;
 }
+/*一级分类*/
 .classify h2 {
     background-color: black;
     color: white;
@@ -103,19 +113,10 @@ header nav ul li a:active {
     height: 30px;
     z-index: 30;
 }
-.service-two {
-    display: none;
-    position: absolute;
-    top: 54px;
-    left: 144px;
-    width: 600px;
-    height: 310px;
-    border: 1px solid black;
-    z-index: 100;
-}
-#service li dl{
+/*二级分类*/
+#service li dl {
     position: relative;
-    left: 138px;
+    left: 144px;
     top: -28px;
     width: 600px;
     height: 294px;
@@ -125,15 +126,7 @@ header nav ul li a:active {
     border: 1px solid black;
     z-index: 30;
 }
-.recommend a img {
-    width: 120px;
-    height: 90px;
-    margin-top: 5px;
-}
-.recommend a img:hover {
-    border: 1px solid black;
-}
-#service li dt{
+#service li dt {
     position: relative;
     width: 150px;
     line-height: 30px;
@@ -142,7 +135,10 @@ header nav ul li a:active {
     color: #fff;
     text-align: center;
 }
-#service li dd a{
+#service li dt :visited {
+    color: white;
+}
+#service li dd a {
     position: relative;
     display: inline-block;
     height: 20px;
@@ -151,25 +147,34 @@ header nav ul li a:active {
     color: #424242;
     text-align: left;
 }
-#service li dd a:hover{
+#service li dd a:hover {
     text-decoration: underline;
 }
-
+/*用心推荐*/
+.recommend a img {
+    width: 120px;
+    height: 90px;
+    margin-top: 5px;
+}
+.recommend a:hover {
+    border: 0;
+}
+.recommend a img:hover {
+    border: 1px solid black;
+}
 /*轮播*/
 .Rotation-chart {
     position: relative;
     width: 830px;
     height: 380px;
     z-index: 5;
-    margin: 0 0 0 13%;
+    margin: 0 auto;
     overflow: hidden;
 }
 .wrap {
     position: absolute;
     width: 5810px;
     height: 380px;
-
-
 }
 .Rotation-chart .wrap img {
     float: left;
@@ -221,10 +226,11 @@ header nav ul li a:active {
 .Rotation-chart .arrow:hover {
     background-color: rgba(0,0,0,0.2);
 }
+/*轮播图中文字以及搜索框*/
 .introduction {
     position: absolute;
     top: 35%;
-    left: 25%;
+    left: 28%;
     z-index: 20;
 }
 .introduction input {
@@ -234,7 +240,7 @@ header nav ul li a:active {
 }
 .introduction .search{
     position: relative;
-    margin: 1.5% 9% 0 3%;
+    margin: 1.5% 6% 0 3%;
     background-color: transparent;
 }
 .searchframe {
@@ -249,7 +255,7 @@ header nav ul li a:active {
 .submit {
     cursor: pointer;
     float: right;
-    margin: 0.5% 0 0 1%;
+    margin: 1% 2% 0 1%;
     padding: 0;
     border: none;
     background: transparent;
@@ -269,7 +275,7 @@ header nav ul li a:active {
     color: black;
     background-color: rgba(255, 255, 255, 0.568);
 }
-/*container-one*/
+/*第一板块*/
 .container-one {
     position: relative;
     width: 100%;
@@ -281,7 +287,7 @@ header nav ul li a:active {
 }
 /*导购导航*/
 .container-one ul {
-    margin: 1% 0;
+    margin: 2% 0 1% 0;
 }
 .container-one ul li {
     display: inline;
@@ -289,7 +295,7 @@ header nav ul li a:active {
     margin: 3% 4%;
     padding: 1%;
     background-color: black;
-    border-radius: 5%;
+    border-radius: 5% 5% 0 0;
 }
 .container-one ul li a:link {
     color: white;
@@ -306,8 +312,7 @@ header nav ul li a:active {
     border: 2px solid black;
     background-color: white;
 }
-
-
+/*商品展示*/
 .container-one .allproduct {
     position: relative;
     margin: 0 auto;
@@ -317,18 +322,26 @@ header nav ul li a:active {
     vertical-align: top;
     position: relative;
     margin: 0 auto;
-    width: 800px;
-    height: 250px;
+    width: 865px;
+    height: 315px;
 }
 .container-one .row-two {
     vertical-align: top;
     position: relative;
     margin: 0 auto;
-    width: 800px;
-    height: 250px;
+    width: 865px;
+    height: 315px;
+}
+.container-one .row-three {
+    vertical-align: top;
+    position: relative;
+    margin: 0 auto;
+    width: 865px;
+    height: 315px;
 }
 .container-one p {
     text-align: left;
+    margin: 0 10px;
 }
 .container-one .row-one ul a {
     float: left;
@@ -336,12 +349,127 @@ header nav ul li a:active {
 .container-one .row-two ul a {
     float: left;
 }
+.container-one .row-three ul a {
+    float: left;
+}
 .container-one .product {
     display: inline;
+    margin: 0 10px;
 }
 .container-one .select {
     margin: 5% 0;
 }
+.product img {
+    position: relative; 
+    box-shadow: 0 0 10px black; 
+}
+/*鼠标扫过闪亮*/
+.light-one{ 
+    cursor: pointer; 
+    position: absolute; 
+    left: -200px; 
+    top: 0; 
+    width: 200px; 
+    height: 200px;
+    z-index: 100;
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+    transform: skewx(-25deg); 
+    -o-transform: skewx(-25deg); 
+    -moz-transform: skewx(-25deg); 
+    -webkit-transform: skewx(-25deg); 
+} 
+.light-two{ 
+    cursor: pointer; 
+    position: absolute; 
+    left: 100px; 
+    top: 0; 
+    width: 200px; 
+    height: 200px;
+    z-index: -1;
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+    transform: skewx(-25deg); 
+    -o-transform: skewx(-25deg); 
+    -moz-transform: skewx(-25deg); 
+    -webkit-transform: skewx(-25deg); 
+}
+.light-three{ 
+    cursor: pointer; 
+    position: absolute; 
+    left: 350px; 
+    top: 0; 
+    width: 200px; 
+    height: 200px;
+    z-index: -1;
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+    transform: skewx(-25deg); 
+    -o-transform: skewx(-25deg); 
+    -moz-transform: skewx(-25deg); 
+    -webkit-transform: skewx(-25deg); 
+} 
+.light-four { 
+    cursor: pointer; 
+    position: absolute; 
+    left: 530px; 
+    top: 0; 
+    width: 200px; 
+    height: 200px;
+    z-index: -1;
+    background-image: -moz-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+    background-image: -webkit-linear-gradient(0deg,rgba(255,255,255,0),rgba(255,255,255,0.5),rgba(255,255,255,0)); 
+    transform: skewx(-25deg); 
+    -o-transform: skewx(-25deg); 
+    -moz-transform: skewx(-25deg); 
+    -webkit-transform: skewx(-25deg); 
+} 
+.product:hover .light-one{ 
+    left: 100px; 
+    -moz-transition: 0.4s; 
+    -o-transition: 0.4s; 
+    -webkit-transition: 0.4s; 
+    transition: 0.4s; 
+}
+.product:hover .light-two{ 
+    left: 300px; 
+    -moz-transition: 0.3s; 
+    -o-transition: 0.3s; 
+    -webkit-transition: 0.3s; 
+    transition: 0.3s; 
+    z-index: 100;
+}
+.product:hover .light-three{ 
+    left: 530px; 
+    -moz-transition: 0.3s; 
+    -o-transition: 0.3s; 
+    -webkit-transition: 0.3s; 
+    transition: 0.3s;
+    z-index: 100;
+}
+.product:hover .light-four{ 
+    left: 800px; 
+    -moz-transition: 0.5s; 
+    -o-transition: 0.5s; 
+    -webkit-transition: 0.5s; 
+    transition: 0.5s;
+    z-index: 100; 
+}
+/*商品样式*/
+.container-one .price{
+    font-size: 110%;
+    color: rgb(113, 2, 117);
+    font-weight: 600;
+}
+.container-one .shop {
+    font-size: 80%;
+    font-weight: 300;
+}
+/*鼠标悬空在商品时样式*/
+.container-one .allproduct a:hover {
+    color: rgb(113, 2, 117);
+}
+
 /*中间线*/
 .centerline {
     background-color: black;
@@ -350,7 +478,7 @@ header nav ul li a:active {
     margin: 10px auto;
 }
 
-/*container-two*/
+/*第二板块*/
 .container-two {
     position: relative;
     width: 100%;
@@ -359,7 +487,7 @@ header nav ul li a:active {
     text-align: center;
 }
 
-/*sidebar*/
+/*侧边栏*/
 .sidebar {
     position: fixed;
     right: 1.5%;
@@ -380,7 +508,7 @@ header nav ul li a:active {
     text-align: center;
 }
 
-
+/*页脚*/
 footer {
     width: 100%;
     height: 20%;
@@ -388,54 +516,6 @@ footer {
     clear: both;
     text-align: center;
     z-index: 10;
-}
-.footer-top {
-    display: table;
-    width: 90%;
-    line-height: 170%;
-}
-.content-L {
-    display: table-cell;
-    width: 40%;
-    vertical-align: center;
-}
-.content-L p{
-    text-align: left;
-    margin-top: 2%;
-    margin-left: 20%;
-}
-.content-M ul li {
-    display: block;
-    text-align: center;
-}
-.content-M {
-    display: table-cell;
-    width: 35%;
-    vertical-align: center;
-}
-.content-R {
-    display: table-cell;
-    width: 25%;
-    vertical-align: center;
-    text-align: left;
-}
-.content-R img {
-    width: 8%;
-    height: 12%;
-}
-.content-R .QR {
-    width: 40%;
-    height: 50%;
-}
-.end-line {
-    border-block-end: 1px dashed rgba(255, 255, 255, 0.6);
-}
-.end {
-    color: rgba(255, 255, 255, 0.6);
-
-}
-.end p {
-    font-size: 90%;
 }
 footer a:link {
     color: black;
@@ -455,14 +535,69 @@ footer .content-L a:visited {
 footer .content-L a:hover {
     color: white;
 }
+/*页脚上半部分*/
+.footer-top {
+    display: table;
+    width: 90%;
+    line-height: 170%;
+    font-size: 15px;
+}
+footer .downline {
+    border-bottom: 2px solid black;
+}
+footer h2 {
+    margin-bottom: 15px;
+}
+/*页脚上半部分左侧*/
+.content-L {
+    display: table-cell;
+    width: 40%;
+    vertical-align: center;
+}
+.content-L p{
+    text-align: left;
+    margin-top: 2%;
+    margin-left: 20%;
+}
+/*页脚上半部分中侧*/
+.content-M {
+    display: table-cell;
+    width: 35%;
+    vertical-align: center;
+}
+.content-M ul li {
+    display: block;
+    text-align: center;
+}
+/*页脚上半部分右侧*/
+.content-R {
+    display: table-cell;
+    width: 25%;
+    vertical-align: center;
+    text-align: left;
+}
+.content-R img {
+    width: 8%;
+    height: 12%;
+}
+/*页脚下半部分*/
+.end-line {
+    border-block-end: 1px dashed rgba(255, 255, 255, 0.6);
+}
+.end {
+    color: rgba(255, 255, 255, 0.6);
+
+}
+.end p {
+    font-size: 90%;
+}
 
 
-
-
-/*登录注册*/
+/*登录注册框*/
 .hide{
     display: none;
 }
+/*背景阴影*/
 .c1{
     position: fixed;
     top:0;
@@ -472,6 +607,7 @@ footer .content-L a:hover {
     background: rgba(0,0,0,.5);
     z-index: 30;
 }
+/*登录注册背景框*/
 .c2{
     position: fixed;
     width: 400px;
@@ -483,8 +619,7 @@ footer .content-L a:hover {
     margin-left: -200px;
     text-align: center;
     border: 1px solid black;
-    background-color: rgba(255, 255, 255, 0.8);
-} 
+    background-color: rgba(255, 255, 255, 0.8);} 
 .c3{
     position: fixed;
     width: 400px;
@@ -497,7 +632,8 @@ footer .content-L a:hover {
     text-align: center;
     border: 1px solid black;
     background-color: rgba(255, 255, 255, 0.8);
-} 
+}
+/*logo*/ 
 .title {
     margin-top: 2%;
 }
@@ -505,9 +641,7 @@ footer .content-L a:hover {
     height: 91px;
     width: 146px;
 }
-.title span {
-    font-size: 190%;
-}
+/*输入表单*/
 .c2 p input {
     margin: 0;
     margin-top: 2%;
@@ -523,11 +657,6 @@ footer .content-L a:hover {
     padding-left: 12%;
     font-size: 82%;
     border-radius: 18px;
-}
-/*字体*/
-@font-face {
-    font-family: Font-one; 
-    src:url("../font-family/SF-Pro.ttf"); 
 }
 .text {
     margin-top: 1%;
@@ -545,6 +674,7 @@ footer .content-L a:hover {
     background-repeat: no-repeat;
     border: 1px solid black;
 }
+/*提交和关闭按钮*/
 .sign-in{
     margin: 0;
     margin-top: 3%;
@@ -567,7 +697,7 @@ footer .content-L a:hover {
     background: linear-gradient(rgba(136, 136, 136,0.6), rgb(250, 248, 248, 0.8), rgb(136, 136, 136,0.6));
     border: 1px solid black;
 }
-
+/*注册新账号or忘记密码？*/
 .next {
     margin: 0 auto;
     margin-top: 4%;
@@ -673,4 +803,10 @@ and (min-width : 1450px) {
 @media only screen
 and (max-width : 958px) {
 
+}
+
+/*字体*/
+@font-face {
+    font-family: Font-one; 
+    src:url("../font-family/SF-Pro.ttf"); 
 }

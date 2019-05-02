@@ -1,0 +1,433 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Microsoft YaHei",微软雅黑,"MicrosoftJhengHei",华文细黑,STHeiti,MingLiu;
+    font-size: 16px;
+}
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+h2 {
+    margin: 5px auto;
+}
+input {
+    outline:none;
+}
+
+.all {
+    min-width: 1280px;
+}
+/*页眉*/
+header {
+    position: fixed;
+    top: 0;
+    width: 1370px;
+    height: 118px;
+    background: linear-gradient( rgb(97, 97, 97), rgba(128, 128, 128, 0.05));
+    z-index: 100;
+}
+/*左侧logo*/
+.logo {
+    float: left;
+    height: 100px;
+    width: 40%;
+}
+/*右侧导航*/
+header nav {
+    float: right;
+    width: 30%;
+    margin-top: -88px;
+    text-align: right;
+    font-size: 100%;
+}
+header ul {
+    list-style-type: none;
+}
+header nav ul li {
+    display: inline;
+    margin: 2%;
+    padding: 2%;
+    text-align: right;
+    color: black;
+    
+}
+header nav ul li a {
+    text-decoration: none;
+}
+
+header nav ul li a:link {
+    color: rgba(255, 255, 255, 0.7);
+}
+header nav ul li a:visited {
+    color: white;
+}
+header nav ul li:hover {
+    color: black;
+    border-bottom: 2px solid white;
+}
+header nav ul li a:active {
+    color: black;
+}
+.header-container {
+    top: 0;
+    width: 100%;
+    height: 118px;
+}
+
+/*搜索框*/
+.searchframe {
+    float: left;
+    width: 380px;
+    height: 40px;
+    margin: -65px 300px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 3.28px 3.774px 9.9px 1.1px rgba(0, 0, 0, 0.11);
+}
+.searchframe input {
+    color: black;
+    border: none;
+    z-index: 2;
+}
+.searchframe .search{
+    position: absolute;
+    margin: 5px 0 5px 10px;
+    font-size: 110%;
+    background-color: transparent;
+}
+.submit {
+    cursor: pointer;
+    float: right;
+    margin: 1% 2% 0 1%;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+.submit img {
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+/*店铺头部*/
+.shopHead {
+    width: 100%;
+    position: relative;
+    height: 80px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: rgba(236, 234, 234, 0.795);
+    border-top: 1px solid black;
+}
+.shopHead h1 {
+    padding: 1% 0;
+}
+/*店铺导航*/
+.shopNav ul {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2px 0;
+    text-align: center;
+    border: 1px solid black;
+}
+.shopNav ul li{
+    display: inline;
+    padding: 0 8px;
+}
+.shopNav ul li a:hover{
+    font-weight: 600;
+}
+/*商品展示*/
+.container-one p {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+
+/*侧边栏*/
+.sidebar {
+    position: fixed;
+    right: 1.5%;
+    top: 20%;
+    z-index: 20;
+}
+.sidebar img {
+    width: 35px;
+    height: 35px;
+}
+.sidebar ul li {
+    background-color: rgba(128, 128, 128, 0.521);
+    margin: 7% 0;
+    padding: 3%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+
+/*页脚*/
+footer {
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(rgba(128, 128, 128, 0.1), rgb(49, 49, 49));
+    clear: both;
+    text-align: center;
+    z-index: 10;
+}
+footer a:link {
+    color: black;
+}
+footer a:visited {
+    color: black;
+}
+footer a:hover {
+    color: white;
+}
+footer .content-L a:link {
+    color: rgb(63, 63, 63);
+}
+footer .content-L a:visited {
+    color: purple;
+}
+footer .content-L a:hover {
+    color: white;
+}
+/*页脚上半部分*/
+.footer-top {
+    display: table;
+    width: 90%;
+    line-height: 170%;
+    font-size: 15px;
+}
+footer .downline {
+    border-bottom: 2px solid black;
+}
+footer h2 {
+    margin-bottom: 15px;
+}
+/*页脚上半部分左侧*/
+.content-L {
+    display: table-cell;
+    width: 40%;
+    vertical-align: center;
+}
+.content-L p{
+    text-align: left;
+    margin-top: 2%;
+    margin-left: 20%;
+}
+/*页脚上半部分中侧*/
+.content-M {
+    display: table-cell;
+    width: 35%;
+    vertical-align: center;
+}
+.content-M ul li {
+    display: block;
+    text-align: center;
+}
+/*页脚上半部分右侧*/
+.content-R {
+    display: table-cell;
+    width: 25%;
+    vertical-align: center;
+    text-align: left;
+}
+.content-R img {
+    width: 8%;
+    height: 12%;
+}
+/*页脚下半部分*/
+.end-line {
+    border-block-end: 1px dashed rgba(255, 255, 255, 0.6);
+}
+.end {
+    color: rgba(255, 255, 255, 0.6);
+
+}
+.end p {
+    font-size: 90%;
+}
+
+
+/*登录注册框*/
+.hide{
+    display: none;
+}
+/*背景阴影*/
+.c1{
+    position: fixed;
+    top:0;
+    bottom: 0;
+    left:0;
+    right: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 30;
+}
+/*登录注册背景框*/
+.c2{
+    position: fixed;
+    width: 400px;
+    height: 305px;
+    top: 50%;
+    left: 50%;
+    z-index: 30;
+    margin-top: -150px;
+    margin-left: -200px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);} 
+.c3{
+    position: fixed;
+    width: 400px;
+    height: 310px;
+    top: 50%;
+    left: 50%;
+    z-index: 30;
+    margin-top: -150px;
+    margin-left: -200px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+/*logo*/ 
+.title {
+    margin-top: 2%;
+}
+.title img {
+    height: 91px;
+    width: 146px;
+}
+/*输入表单*/
+.c2 p input {
+    margin: 0;
+    margin-top: 2%;
+    padding: 3%;
+    padding-left: 12%;
+    font-size: 82%;
+    border-radius: 18px;
+}
+.c3 p input {
+    margin: 0;
+    margin-top: 2%;
+    padding: 3%;
+    padding-left: 12%;
+    font-size: 82%;
+    border-radius: 18px;
+}
+.text {
+    margin-top: 1%;
+    background-image: url("../image/user-name.png");
+    background-color: rgba(253, 252, 252, 0.8);
+    background-position: left;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+.password {
+    margin-bottom: 1%;
+    background-image: url("../image/password.png");
+    background-color: rgba(253, 252, 252, 0.8);
+    background-position: left;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+/*提交和关闭按钮*/
+.sign-in{
+    margin: 0;
+    margin-top: 3%;
+    cursor:pointer;
+    padding: 2%;
+    font-size: 100%;
+    font-weight: 600;
+    border-radius: 5%;
+    background: linear-gradient(rgba(219, 219, 219, 0.6), rgba(250, 248, 248, 0.8), rgb(136, 136, 136,0.6));
+    border: 1px solid black;
+}
+.close {
+    margin: 0;
+    margin-top: 3%;
+    cursor:pointer;
+    padding: 2%;
+    font-size: 100%;
+    font-weight: 600;
+    border-radius: 5%;
+    background: linear-gradient(rgba(136, 136, 136,0.6), rgb(250, 248, 248, 0.8), rgb(136, 136, 136,0.6));
+    border: 1px solid black;
+}
+/*注册新账号or忘记密码？*/
+.next {
+    margin: 0 auto;
+    margin-top: 4%;
+}
+.next .left {
+    text-align: left;
+}
+.next .right {
+    text-align: right;
+}
+.next .left a {
+    padding: 0 10%;
+    font-size: 100%;
+    color: black;
+    text-align: center;
+}
+.next .right a {
+    padding: 0 10%;
+    color: black;
+}
+.next a:link {
+    font-weight: 400;
+}
+.next a:visited {
+    font-weight: 600;
+}
+.next a:hover {
+    font-weight: 600;
+}
+.next a:active {
+    font-weight: 800;
+    border-bottom: 1px solid gray;
+}
+
+
+
+/*响应式布局*/
+/* ----------- */
+@media only screen
+and (min-width : 1340px)
+and (max-width : 958px) {
+/* Styles如上 */
+}
+/* ----------- */
+@media only screen
+and (min-width : 1370px) {
+    .all {
+        width: 1370px;  /*凝胶布局*/
+        margin-left: auto;
+	    margin-right: auto;
+    }
+}
+/* ----------- */
+@media only screen
+and (max-width : 958px) {
+
+}
+
+/*字体*/
+@font-face {
+    font-family: Font-one; 
+    src:url("../font-family/SF-Pro.ttf"); 
+}
