@@ -32,7 +32,7 @@ input {
 header {
     position: fixed;
     top: 0;
-    width: 1370px;
+    width: 1355px;
     height: 118px;
     background: linear-gradient( rgb(97, 97, 97), rgba(128, 128, 128, 0.05));
     z-index: 100;
@@ -151,18 +151,120 @@ header nav ul li a:active {
     font-weight: 600;
 }
 /*商品展示*/
-.container-one p {
-    margin: 0 auto;
+.container-one {
+    width: 86%;
+    height: 570px;
+    margin: 3% auto;
     text-align: center;
+}
+.container-one .detail {
+    width: 85%;
+}
+/*左侧图片*/
+.container-one .detail .picture {
+    float: left;
+    width: 420px;
+}
+.container-one .small-picture {
+    margin: 10px 0;
+}
+.container-one .small-picture img:hover {
+    border: 1px solid black;
+    height: 58px;
+    width: 58px;
+}
+.container-one .small-picture ul {
+    height: 62px;
+}
+.container-one .small-picture ul li {
+    display: inline;
+    margin: 0 7px;
+}
+/*图片下方分享收藏举报*/
+.container-one .another {
+    display: inline;
+}
+.container-one .another a {
+    float: left;
+    margin: 12px 0;
+    color: rgb(88, 88, 88);
+    font-size: 80%;
+}
+.container-one .another img {
+    width: 13px;
+    height: 13px;
+}
+.container-one .another .report {
+    float: right;
+}
+/*右侧内容*/
+.container-one .detail .information {
+    margin: 0 0 0 450px;
+    text-align: left;
+}
+.price {
+    width: 95%;
+    height: 160px;
+    margin: 12px 0;
+    background-color: rgba(128, 128, 128, 0.568);
+}
+.price p {
+    background-color: gray;
+    padding: 1% 0;
+    text-align: center;
+}
+.price dt {
+    float: left;
+}
+.price dd {
+    margin: 0 0 0 60px;
+    text-decoration: line-through;
+}
+.price dd img {
+    width: 20px;
+    height: 20px;
 }
 
 
+/*最右侧推荐栏*/
+.container-one .recommend {
+    position: absolute;
+    width: 200px;
+    top: 270px;
+    right: 70px;
+    border-left: 1px solid rgba(128, 128, 128, 0.527); 
+}
+.container-one .recommend p {
+    margin: 0 0 10px 0;
+    font-size: 90%;
+}
+.container-one .recommend .turn {
+    width: 200px;
+    height: 500px;
+    overflow: hidden;
+}
+.container-one .recommend .turn ul li {
+    margin: 10px 0;
+}
+.container-one .recommend .turn img {
+    width: 135px;
+    height: 135px;
+}
+.container-one .recommend .arrow img {
+    height: 30px;
+    width: 30px;
+}
+
+/*第二部分——店铺信息，商品简介和评价*/
+.container-two p {
+    text-align: center;
+}
 
 /*侧边栏*/
 .sidebar {
     position: fixed;
-    right: 1.5%;
     top: 20%;
+    right: 0;
     z-index: 20;
 }
 .sidebar img {
@@ -171,8 +273,8 @@ header nav ul li a:active {
 }
 .sidebar ul li {
     background-color: rgba(128, 128, 128, 0.521);
-    margin: 7% 0;
-    padding: 3%;
+    margin: 5px 0;
+    padding: 5px;
     width: 40px;
     height: 40px;
     text-align: center;
@@ -413,9 +515,9 @@ and (max-width : 958px) {
 }
 /* ----------- */
 @media only screen
-and (min-width : 1370px) {
+and (min-width : 1355px) {
     .all {
-        width: 1370px;  /*凝胶布局*/
+        width: 1355px;  /*凝胶布局*/
         margin-left: auto;
 	    margin-right: auto;
     }
