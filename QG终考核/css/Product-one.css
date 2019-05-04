@@ -128,11 +128,14 @@ header nav ul li a:active {
     height: 80px;
     margin: 0 auto;
     text-align: center;
-    background-color: rgba(236, 234, 234, 0.795);
+    background-image: -webkit-linear-gradient(bottom, rgb(0, 0, 0), rgba(73, 72, 72, 0.6), rgba(255, 255, 255, 0.685));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     border-top: 1px solid black;
 }
 .shopHead h1 {
     padding: 1% 0;
+    font-size: 40px;
 }
 /*店铺导航*/
 .shopNav ul {
@@ -165,6 +168,9 @@ header nav ul li a:active {
     float: left;
     width: 420px;
 }
+.big-picture {
+    position: relative;
+}
 .container-one .small-picture {
     margin: 10px 0;
 }
@@ -179,6 +185,36 @@ header nav ul li a:active {
 .container-one .small-picture ul li {
     display: inline;
     margin: 0 7px;
+}
+
+/*放大镜部分*/
+.bigger {
+    width: 418px;
+    height: 418px;
+    border: 1px solid black;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    z-index: 999;
+}
+.bigger img{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.fd {
+    width: 180px;
+    height: 180px;
+    display: none;
+    cursor: move;
+    box-shadow: 0px 0px 10px black;
+    background-color: rgb(99, 122, 131);
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 /*图片下方分享收藏举报*/
 .container-one .another {
@@ -200,55 +236,156 @@ header nav ul li a:active {
 /*右侧内容*/
 .container-one .detail .information {
     margin: 0 0 0 450px;
+    position: relative;
     text-align: left;
+    height: 570px;
+}
+.band {
+    color: rgb(122, 2, 126);
+    font-size: 90%;
+    margin-top: 3px;
 }
 .price {
     width: 95%;
-    height: 160px;
     margin: 12px 0;
-    background-color: rgba(128, 128, 128, 0.568);
+    background-color: rgba(128, 128, 128, 0.15);
+    font-size: 85%;
 }
 .price p {
-    background-color: gray;
+    background-color: rgb(161, 3, 167);
     padding: 1% 0;
+    color: white;
     text-align: center;
 }
-.price dt {
-    float: left;
+.information dl {
+    margin: 2%;
 }
-.price dd {
-    margin: 0 0 0 60px;
+.information dt {
+    float: left;
+    margin: 0 30px 0 20px;
+}
+.information dd {
+    margin: 5px 0 0 0;
+}
+.price .former-price {
     text-decoration: line-through;
 }
+.enlarge-num {
+    font-size: 200%;
+    font-weight: 600;
+    color: rgb(161, 3, 167);
+}
+.activity-word {
+    color: rgb(122, 2, 126);
+    font-size: 110%;
+}
 .price dd img {
-    width: 20px;
-    height: 20px;
+    width: 22px;
+    height: 22px;
+}
+select {
+    border: 0;
+    outline: none;
+    background-color: transparent;
+}
+.price select {
+    width: 360px;
+    margin-bottom: 8px;
+    outline: none;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    letter-spacing: 1px;
+    background: url("../image/icon/down-2.png") right center no-repeat;
+}
+select option {
+    outline: none;
+}
+select option:checked {
+    background: rgb(122, 2, 126);
+    color: white;
+}
+.more {
+    font-size: 85%;
+}
+.sale {
+    border-bottom: 1px dashed rgba(128, 128, 128, 0.3);
+    border-top: 1px dashed rgba(128, 128, 128, 0.3);
+    padding: 8px 0;
+    text-align: center;
+}
+.sale li {
+    display: inline;
+    padding: 0 25px;
+    font-size: 92%;
+    color: rgba(128, 128, 128, 0.9);
+}
+.sale li:first-child {
+    border-right: 1px solid rgba(128, 128, 128, 0.5);
+}
+.sale li:last-child {
+    border-left: 1px solid rgba(128, 128, 128, 0.5);
+}
+.num {
+    color: rgb(122, 2, 126);
+    font-weight: 600;
+}
+.size {
+    padding: 5px 0;
+    font-size: 95%;
+}
+.size li {
+    display: inline;
+    padding: 5px 10px;
+    margin: 5px 5px;
+    border: 1px solid rgba(128, 128, 128, 0.9);
+}
+.last {
+    border: 1px dashed rgba(128, 128, 128, 0.9);
+    opacity: 0.4;
+    cursor: no-drop;
+}
+.size li:hover {
+    border: 1px solid rgb(191, 3, 197);
+}
+.classify li {
+    display: inline;
+    padding: 5px;
+}
+.classify img {
+    height: 40px;
+    width: 40px;
+    border: 1px solid rgba(128, 128, 128, 0.7);
+}
+.classify img:hover {
+    border: 1px solid rgb(191, 3, 197);
 }
 
 
 /*最右侧推荐栏*/
 .container-one .recommend {
-    position: absolute;
+    float: right;
     width: 200px;
-    top: 270px;
-    right: 70px;
+    height: 570px;
+    margin: -570px -35px 0 0; 
     border-left: 1px solid rgba(128, 128, 128, 0.527); 
 }
 .container-one .recommend p {
     margin: 0 0 10px 0;
     font-size: 90%;
 }
-.container-one .recommend .turn {
+.turn {
     width: 200px;
-    height: 500px;
+    height: 480px;
     overflow: hidden;
 }
+
 .container-one .recommend .turn ul li {
     margin: 10px 0;
 }
 .container-one .recommend .turn img {
-    width: 135px;
-    height: 135px;
+    width: 145px;
+    height: 145px;
 }
 .container-one .recommend .arrow img {
     height: 30px;

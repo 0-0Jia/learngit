@@ -10,7 +10,7 @@
     <header>
         <!--左侧logo-->
         <div class="logo">
-            <img src="../image/logo.png" width="183px" height="114px">
+            <img src="../image/logo/logo.png" width="183px" height="114px">
         </div>
         &nbsp;
         <!--搜索框-->
@@ -18,14 +18,14 @@
             <form>
                 <input class="search" type="text" name="search" placeholder=" 每天一购，开启好心情" style="width:300px; height:30px;">
                 <button class="submit" type="button" name="submit" value=" " style="width:30px; height:30px;">
-                <img src="../image/search.png">
+                <img src="../image/icon/search.png">
                 </button>
             </form>
         </div>
         <!--导航-->
         <nav>
             <ul>
-                <li><a href="../html/Homepage.html">首页</a></li>
+                <li><a href="../html/Homepage.html" target="_blank">首页</a></li>
                 <li><a href="javascript:;" onclick="Show();">登录</a></li>
                 <li><a href="javascript:;" onclick="ShowTwo();">注册</a></li>
                 <li><a href="">帮助</a></li>
@@ -63,58 +63,133 @@
         <div class="detail">
             <div class="picture">
                 <div class="big-picture">
-                    <img src="../image/shirt-one.jpg" id="pic">
+                    <img src="../image/container-one/shirt-one.jpg" id="pic">
+                    <div class="fd"></div>
                 </div>
+
                 <div class="small-picture">
                     <ul>
-                        <li id="li01"><img src="../image/shirt-one-s.jpg"></li>
-                        <li id="li02"><img src="../image/shirt-two-s.jpg"></li>
-                        <li id="li03"><img src="../image/shirt-three-s.jpg"></li>
-                        <li id="li04"><img src="../image/shirt-four-s.jpg"></li>
-                        <li id="li05"><img src="../image/shirt-five-s.jpg"></li>
+                        <li id="li01"><img src="../image/container-one/shirt-one-s.jpg"></li>
+                        <li id="li02"><img src="../image/container-one/shirt-two-s.jpg"></li>
+                        <li id="li03"><img src="../image/container-one/shirt-three-s.jpg"></li>
+                        <li id="li04"><img src="../image/container-one/shirt-four-s.jpg"></li>
+                        <li id="li05"><img src="../image/container-one/shirt-five-s.jpg"></li>
                     </ul>
                 </div>
                 <div class="another">
-                    <a href=""><img src="../image/share.png">&nbsp;分 享&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
-                    <a href=""><img src="../image/star-fill.png">&nbsp;收 藏</a>
+                    <a href=""><img src="../image/icon/share.png">&nbsp;分 享&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                    <a href=""><img src="../image/icon/star-fill.png">&nbsp;收 藏</a>
                     <a href="" class="report">举报</a>
                 </div>
             </div>
-            <div class="information">
-                <h3>Miss Sixty2019新款春季一字肩系带仙女范灯笼袖衬衣女</h3>
-                <p>品牌创立于1991年，源自意大利。</p>
-                <div class="price">
-                    <p>限 时 优 惠</p>
-                    <dl>
-                        <dt>
-                            价格
-                        </dt>
-                        <dd>
-                            <img src="../image/YUAN.png">
-                            <span>1490.00</span>
-                        </dd>
-                    </dl>
+            <div class="bigger">
+                <img src="../image/container-one/shirt-one-b.jpg"  id="picBig">
+            </div>
+            <div class="information" style="margin-top:0px;">
+                <div class="information-two">
+                    <h3>Miss Sixty2019新款春季一字肩系带仙女范灯笼袖衬衣女</h3>
+                    <p class="band">品牌创立于1991年，源自意大利。</p>
+                    <div class="price">
+                        <p>Wow , 宝 贝 现 在 正 大 降 价 哦 </p>
+                        <dl>
+                            <dt>价 格</dt>
+                            <dd>
+                                <div>
+                                        ￥<span class="former-price"> 1490.00</span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>促 销</dt>
+                            <dd>
+                                <div>
+                                    <img src="../image/icon/YUAN.png">
+                                    <span class="enlarge-num">671.00</span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>活 动</dt>
+                            <dd>
+                                <div>
+                                    <select class="activity-word">
+                                        <option value="1">满999，包邮 更多优惠</option>
+                                        <option value="2">666包邮 从2019.5.10 &nbsp;21:00:00开始</option>
+                                        <option value="3">520包邮 从2019.5.20 &nbsp;00:00:00开始</option>
+                                    </select>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="more">
+                        <dl>
+                            <dt>运 费</dt>
+                            <dd>
+                                <div>
+                                    <span>广东广州 至
+                                        <select>
+                                            <option value="1">广州</option>
+                                            <option value="2">深圳</option>
+                                            <option value="3">揭阳</option>
+                                            <option value="4">汕头</option>
+                                            <option value="5">潮州</option>
+                                        </select>
+                                        &nbsp;快递:10.00
+                                    </span>
+                                </div>
+                            </dd>
+                        </dl>
+                        <ul class="sale">
+                            <li>月销量<span class="num"> 100</span></li>
+                            <li>累计评价<span class="num"> 100</span></li>
+                            <li>送QG积分<span class="num"> 500</span></li>
+                        </ul>
+                        <dl>
+                            <dt>尺 码</dt>
+                            <dd>
+                                <ul class="size">
+                                    <a href=""><li>XS</li></a>
+                                    <a href=""><li>S</li></a>
+                                    <a href=""><li>M</li></a>
+                                    <a href=""><li class="last">L</li></a>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>分 类</dt>
+                            <ul class="classify">
+                                <li><a href=""><img src="../image/container-one/shirt-one.jpg"></a></li>
+                                <li><a href=""><img src="../image/container-one/shirt-two.jpg"></a></li>
+                            </ul>
+                        </dl>
+                        <dl>
+                            <dt>数 量</dt>
+                            <dd>
+
+                            </dd>
+                        </dl>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="recommend">
             <p>-----猜你喜欢-----</p>
             <div class="turn">
-                <ul>
-                    <li><a href=""><img src="../image/cup.jpg"><p></p></a></li>
-                    <li><a href=""><img src="../image/cup.jpg"></a></li>
-                    <li><a href=""><img src="../image/cup.jpg"></a></li>
-                    <li><a href=""><img src="../image/cup.jpg"></a></li>
-                    <li><a href=""><img src="../image/cup.jpg"></a></li>
-                    <li><a href=""><img src="../image/cup.jpg"></a></li>
-                    <li><a href=""><img src="../image/cup.jpg"></a></li>
-                    <li><a href=""><img src="../image/cup.jpg"></a></li>
-                    <li><a href=""><img src="../image/cup.jpg"></a></li>
+                <ul class="ulmove" style="margin-top:0px;">
+                    <li><a href=""><img src="../image/container-one/MS-1.jpg"><p></p></a></li>
+                    <li><a href=""><img src="../image/container-one/MS-2.jpg"></a></li>
+                    <li><a href=""><img src="../image/container-one/MS-3.jpg"></a></li>
+                    <li><a href=""><img src="../image/container-one/MS-4.jpg"></a></li>
+                    <li><a href=""><img src="../image/container-one/MS-5.jpg"></a></li>
+                    <li><a href=""><img src="../image/container-one/MS-6.jpg"></a></li>
+                    <li><a href=""><img src="../image/container-one/MS-7.jpg"></a></li>
+                    <li><a href=""><img src="../image/container-one/MS-8.jpg"></a></li>
+                    <li><a href=""><img src="../image/container-one/MS-9.jpg"></a></li>
                 </ul>
             </div>
             <div class="arrow">
-                <a href=""><img src="../image/up.png"></a>
-                <a href=""><img src="../image/down.png"></a>
+                <a href="javascript:;" class="arrow_up"><img src="../image/icon/up.png"></a>
+                <a href="javascript:;" class="arrow_down"><img src="../image/icon/down.png"></a>
             </div>
         </div>
     </div>
@@ -148,16 +223,16 @@
     <div class="sidebar">
         <ul>
             <li>
-                <a href="javascript:;" onclick="Show();"><img src="../image/heart-fill.png"></a>
+                <a href="javascript:;" onclick="Show();"><img src="../image/icon/heart-fill.png"></a>
             </li>
             <li>
-                <a href="javascript:;" onclick="Show();"><img src="../image/shopping.png"></a>
+                <a href="javascript:;" onclick="Show();"><img src="../image/icon/shopping.png"></a>
             </li>
             <li>
-                <a href="javascript:;" onclick="Show();"><img src="../image/customerservice.png"></a>
+                <a href="javascript:;" onclick="Show();"><img src="../image/icon/customerservice.png"></a>
             </li>
             <li>
-                <a href="#"><img src="../image/vertical-align-top.png"></a>
+                <a href="#"><img src="../image/icon/vertical-align-top.png"></a>
             </li>
         </ul>
     </div>
@@ -165,7 +240,7 @@
     <div id="shade" class="c1 hide"></div>
     <div id="modal" class="c2 hide">
         <div class="title">
-            <img src="../image/logo.png">
+            <img src="../image/logo/logo.png">
         </div>
     <p><input type="text"  id="" class="text" name="" tabindex="" value="" maxlength="" placeholder="userName"/></p>
     <p><input type="password" id="" class="password" tabindex="" value="" maxlength="" placeholder="password"/></p>
@@ -185,7 +260,7 @@
     <div id="a" class="c1 hide"></div>
     <div id="b" class="c3 hide">
         <div class="title">
-            <img src="../image/logo.png">
+            <img src="../image/logo/logo.png">
         </div>
     <p><input type="text"  id="" class="text" name="" tabindex="" value="" maxlength="" placeholder="new username"/></p>
     <p><input type="password" id="" class="password" tabindex="" value="" maxlength="" placeholder="new password"/></p>
@@ -209,7 +284,7 @@
                 轻松活泼的家庭式氛围。
                 每位在QG SHOP进行交易的人，
                 不但交易更迅速，而且也能交到更多朋友。
-                <a href="../image/QR.png" target="_blank">[了解更多]</a>
+                <a href="../image/QR/QR.png" target="_blank">[了解更多]</a>
             </p>
         </div>
         <div class="content-M">
@@ -224,15 +299,15 @@
         </div>
         <div class="content-R">
             <h2><span class="downline">联系</span>我们</h2>
-            <img src="../image/phone-fill.png">
+            <img src="../image/icon/phone-fill.png">
             &nbsp;<span>19924335795</span><br>
-            <img src="../image/home-fill.png">
+            <img src="../image/icon/home-fill.png">
             &nbsp;<span>广州市广东工业大学QG工作室</span><br>
-            <img src="../image/mail-fill.png">
+            <img src="../image/icon/mail-fill.png">
             &nbsp;<span>1036748415@qq.com</span><br>
-            <img src="../image/wechat-fill.png">
+            <img src="../image/icon/wechat-fill.png">
             &nbsp;<span>**********</span><br>
-            <img src="../image/weibo-circle-fill.png">
+            <img src="../image/icon/weibo-circle-fill.png">
             &nbsp;<span>**********</span><br>
         </div>
         </div>
@@ -248,9 +323,9 @@
                 <br>
                 © 2000-现在 QGstudio.com 版权所有&nbsp;&nbsp;&nbsp;&nbsp;技术支持 ： 中国万网
                 &nbsp;&nbsp;
-                <img src="../image/cnzz.png">
+                <img src="../image/footer/cnzz.png">
                 &nbsp;
-                <img src="../image/工商.png">
+                <img src="../image/footer/工商.png">
                 <br>
             </p>
             <br>
