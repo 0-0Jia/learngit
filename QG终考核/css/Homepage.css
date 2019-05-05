@@ -60,7 +60,10 @@ header nav ul li {
     padding: 2%;
     text-align: right;
     color: black;
-    
+
+}
+header nav ul li:last-child {
+    margin-right: 43px;
 }
 header nav ul li a {
     text-decoration: none;
@@ -119,7 +122,7 @@ header nav ul li a:active {
 /*二级分类*/
 #service li dl {
     position: relative;
-    left: 144px;
+    left: 130px;
     top: -28px;
     width: 600px;
     height: 294px;
@@ -127,6 +130,7 @@ header nav ul li a:active {
     display: none;
     padding: 8px 10px;
     border: 1px solid black;
+    border-radius: 0 15px 15px 15px;
     z-index: 30;
 }
 #service li dt {
@@ -158,14 +162,14 @@ header nav ul li a:active {
 .recommend a img {
     width: 120px;
     height: 90px;
-    margin-top: 5px;
-}
-.recommend a:hover {
-    border: 0;
+    margin-top: 8px;
 }
 .recommend a img:hover {
     border: 1px solid black;
+    height: 88px;
+    width: 118px;
 }
+
 /*轮播*/
 .Rotation-chart {
     position: relative;
@@ -316,6 +320,7 @@ header nav ul li a:active {
 .container-one nav ul li:hover {
     border: 2px solid black;
     background-color: white;
+    padding: 0 1% 1% 1%;
 }
 /*商品展示*/
 .container-one .allproduct {
@@ -461,7 +466,7 @@ header nav ul li a:active {
     z-index: 100; 
 }
 /*商品样式*/
-.container-one .price{
+.container-one .price {
     font-size: 110%;
     color: rgb(113, 2, 117);
     font-weight: 600;
@@ -486,11 +491,161 @@ header nav ul li a:active {
 /*第二板块*/
 .container-two {
     position: relative;
-    width: 100%;
+    width: 92%;
     height: 40%;
+    margin: 0 auto;
     z-index: 10;
     text-align: center;
 }
+.table-big {
+    margin: 10px auto;
+    text-align: center;
+}
+.table-one, .table-two {
+    border-radius: 10px;
+}
+.table-one th{
+    font-size: 110%;
+    padding: 5px 20px 5px 5px;
+    color: rgb(113, 2, 117);
+    text-align: left;
+    border-left: 8px solid rgb(113, 2, 117);
+    border-top: 2px solid rgb(113, 2, 117);
+    border-radius: 40px;
+}
+.table-two th {
+    font-size: 110%;
+    padding: 5px 20px 5px 5px;
+    color: rgb(113, 2, 117);
+    text-align: left;
+    border-left: 8px solid rgb(113, 2, 117);
+    border-right: 8px solid rgb(113, 2, 117);
+    border-top: 2px solid rgb(113, 2, 117);
+}
+.table-one, .table-two {
+    margin: 20px;
+    width: 502px;
+    height: 500px;
+    margin: 0 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/*两张较大图鼠标移动显示价格*/
+.price-one, .price-two {
+    display: none;
+    width: 250px;
+    height: 470px;
+    position: absolute;
+    top: 10%;
+    margin: 0 auto;
+    font-size: 200%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+}
+.price-one p {
+    padding: 190px 0;
+}
+.price-two p {
+    padding: 190px 0;
+}
+/*六张较小图鼠标移动显示价格*/
+.price-three, .price-six {
+    display: none;
+    width: 250px;
+    height: 160px;
+    position: absolute;
+    top: 54%;
+    margin: 0 auto;
+    font-size: 150%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 999;
+}
+.price-four, .price-seven {
+    display: none;
+    width: 250px;
+    height: 160px;
+    position: absolute;
+    top: 69%;
+    margin: 0 auto;
+    font-size: 150%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 999;
+}
+.price-five, .price-eight {
+    display: none;
+    width: 250px;
+    height: 160px;
+    position: absolute;
+    top: 84%;
+    margin: 0 auto;
+    font-size: 150%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 999;
+}
+.price-three p {
+    padding: 50px 0;
+}
+.price-four p {
+    padding: 43px 0;
+}
+.price-five p {
+    padding: 43px 0;
+}
+.price-six p {
+    padding: 50px 0;
+}
+.price-seven p {
+    padding: 43px 0;
+}
+.price-eight p {
+    padding: 43px 0;
+}
+
+
+
+
+
+/*翻转图片*/
+.flip-container {
+    margin: 30px;
+    display: inline-block;
+    -webkit-perspective: 500;
+    -moz-perspective: 500;
+    -ms-perspective: 500;
+    perspective: 500;
+    -ms-transform: perspective(500px);
+    -moz-transform: perspective(500px); /*重要*/
+    transform-style: preserve-3d; /*重要*/
+}
+.flipper {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    transition: 0.6s;
+    transform-style: preserve-3d; /*重要*/
+}
+/* 触发翻转 */
+.flip-container:hover .flipper{
+    transform: rotateY(180deg);
+
+}
+.front ,.back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;  /*重要*/
+    width: 100%;
+    height: 100%;
+}
+.front {
+    transform: rotateY(0deg);
+    z-index: 2;
+
+}
+.back {
+    transform: rotateY(-180deg);
+
+}
+
 
 /*侧边栏*/
 .sidebar {
@@ -502,7 +657,6 @@ header nav ul li a:active {
 .sidebar img {
     width: 35px;
     height: 35px;
-
 }
 .sidebar ul li {
     background-color: rgba(128, 128, 128, 0.521);
