@@ -300,29 +300,23 @@ header nav ul li a:active {
 }
 .container-one ul li {
     display: inline;
+    cursor: pointer;
     font-size: 120%;
     margin: 3% 4%;
     padding: 1%;
-    background-color: black;
+    color: white;
+    background: black;
+    border: 2px solid black;
     border-radius: 5% 5% 0 0;
-}
-.container-one ul li a:link {
-    color: white;
-}
-.container-one ul li a:visited {
-    color: white;
-}
-.container-one ul li a:hover {
-    font-weight: 550;
-    color: black;
-
 }
 .container-one nav ul li:hover {
     border: 2px solid black;
     background-color: white;
+    color: black;
     padding: 0 1% 1% 1%;
 }
 /*商品展示*/
+/*第一页*/
 .container-one .allproduct {
     position: relative;
     margin: 0 auto;
@@ -373,6 +367,22 @@ header nav ul li a:active {
     position: relative; 
     box-shadow: 0 0 10px black; 
 }
+/*第二页*/
+.allproduct-two {
+    display: none;
+}
+/*第三页*/
+.allproduct-three {
+    display: none;
+}
+/*第四页*/
+.allproduct-four {
+    display: none;
+}
+
+
+
+
 /*鼠标扫过闪亮*/
 .light-one{ 
     cursor: pointer; 
